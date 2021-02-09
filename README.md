@@ -64,3 +64,12 @@ services:
             - EMAIL=example@example.com
             - PASSWORD=password123
 ```
+
+## Login with Cookies
+If the program closes because it encounters in a captcha you can try to login through cookies. To do this you must:
+- Open a browser and enter to [epic games store](https://www.epicgames.com/store/en-US/)
+- Login making sure that you have checked the "remember me" box
+- Install an extension on your browser to export cookies. I have used [this](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg) but also [this](https://chrome.google.com/webstore/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm) should work
+- Open the extension and export all the cookies (fifth button starting from the left in the top bar of the extension that I used)
+- Paste the cookies into the file called cookies.json
+- Restart the script
