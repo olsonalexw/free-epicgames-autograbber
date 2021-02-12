@@ -263,10 +263,12 @@ def execute():
             logger.debug('close the cookies banner')
             # close cookie policy span as it interferes
             # with clicking on the purchase button
-            browser.find_element_by_xpath(
-                "//button[@id='onetrust-accept-btn-handler']"
+            WebDriverWait(browser, TIMEOUT).until(
+                EC.element_to_be_clickable((
+                    By.XPATH,
+                    "//div[@id='onetrust-close-btn-container']/button"
+                ))
             ).click()
-
         except NoSuchElementException:
             logger.debug('no cookies banner to close')
 
