@@ -277,7 +277,7 @@ def execute():
             games_found = WebDriverWait(browser, TIMEOUT).until(
                 EC.visibility_of_all_elements_located((
                     By.XPATH,
-                    "//a[descendant::span[text()='Free Now']]"
+                    "//a[descendant::span[text()='Free Now -']]"
                 ))
             )
 
